@@ -48,12 +48,30 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <input type='text' placeholder='Message' value={this.state.message} onChange={this.onChange}/>
-        <button onClick={this.sendMessage}>Send</button>
-        {this.state.messages.map((message, index) => {
-          return <div key={index}>{message}</div>
-        })}
+    //   <div class="container">
+    //   <div class="messages">
+    //     <ul id="messages-list"></ul>
+    //   </div>
+    //   <div class="actions">
+    //     <form>
+    //       <input id="message" autocomplete="off" placeholder="Type a message...">
+    //       <button>Send</button>
+    //     </form>
+    //   </div>
+    // </div>
+
+      <div className="container">
+        <div className="messages">
+          <ul id="messages-list">
+              {this.state.messages.map((message, index) => {
+              return <li key={index}>{message}</li>
+            })}
+          </ul>
+        </div>
+        <div className="actions">      
+          <input type='text' placeholder='Message' value={this.state.message} onChange={this.onChange}/>
+          <button onClick={this.sendMessage}>Send</button> 
+        </div>
       </div>
     );
   }
