@@ -47,18 +47,6 @@ class App extends Component {
 
   render() {
     return (
-    //   <div class="container">
-    //   <div class="messages">
-    //     <ul id="messages-list"></ul>
-    //   </div>
-    //   <div class="actions">
-    //     <form>
-    //       <input id="message" autocomplete="off" placeholder="Type a message...">
-    //       <button>Send</button>
-    //     </form>
-    //   </div>
-    // </div>
-
       <div className="container">
         <div className="messages">
           <ul id="messages-list">
